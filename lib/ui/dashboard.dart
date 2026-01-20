@@ -1,3 +1,4 @@
+import 'package:credpal_shopping/ui/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -5,9 +6,15 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
-        
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              TopBar()
+            ],
+          ),
+        )
       ),
     );
   }
