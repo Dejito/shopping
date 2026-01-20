@@ -1,107 +1,104 @@
 import 'package:credpal_shopping/data/models/product_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductGridItem extends StatelessWidget {
   final ProductModel product;
-  final double height;
 
-  const ProductGridItem({
-    super.key,
-    required this.product,
-    required this.height,
-  });
+  const ProductGridItem({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: height, // fixed height for predictable layout
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(22),
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 20,
-              offset: const Offset(0, 10),
-              color: Colors.black.withOpacity(0.06),
-            ),
-          ],
-        ),
-        child: Stack(
-          children: [
-            // Vendor logo / static badge
-            Positioned(
-              top: 12,
-              left: 12,
-              child: CircleAvatar(
-                radius: 18,
-                backgroundColor: Colors.white,
-                child: Image.asset(
-                  product.merchantLogo,
-                  height: 20,
-                  fit: BoxFit.contain,
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 15,
+            offset: const Offset(0, 4),
+            color: Colors.black.withOpacity(0.04),
+          ),
+        ],
+      ),
+      child: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Image.asset(
+                    product.productImage,
+                    fit: BoxFit.scaleDown,
+                    height: 100.h,
+                    width: 150.w,
+                  ),
                 ),
-              ),
-            ),
-
-            // Product content
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 48, 12, 14),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Product image
-                  Expanded(
-                    child: Center(
-                      child: Image.asset(
-                        product.productImage,
-                        fit: BoxFit.contain,
-                      ),
-                    ),
+                // const SizedBox(height: 8),
+                Text(
+                  product.productName,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black87,
                   ),
-
-                  const SizedBox(height: 12),
-
-                  // Product title
-                  Text(
-                    product.productName,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-
-                  const SizedBox(height: 8),
-
-                  // Price row
-                  Row(
+                ),
+                const SizedBox(height: 4),
+                // Price Row
+                FittedBox( // Prevents overflow on small screens
+                  child: Row(
                     children: [
                       Text(
-                        '₦${product.productPrice}',
+                        '₦ ${product.productPrice}',
                         style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
                           color: Color(0xFF274FED),
                         ),
                       ),
-                      const SizedBox(width: 8),
+                      const SizedBox(width: 6),
                       Text(
-                        '₦${product.productSlashedPrice}',
+                        '₦ ${product.productSlashedPrice}',
                         style: const TextStyle(
-                          fontSize: 14,
+                          fontSize: 12,
                           color: Colors.grey,
                           decoration: TextDecoration.lineThrough,
                         ),
                       ),
                     ],
                   ),
+                ),
+              ],
+            ),
+          ),
+
+          // 2. Floating Badge Layer (Top Left)
+          Positioned(
+            top: 10,
+            left: 10,
+            child: Container(
+              height: 40,
+              width: 40,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.05),
+                    blurRadius: 4,
+                  )
                 ],
               ),
+              padding: const EdgeInsets.all(6),
+              child:
+                   Image.asset(product.merchantLogo, fit: BoxFit.contain),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

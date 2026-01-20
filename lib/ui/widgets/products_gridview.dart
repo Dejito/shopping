@@ -12,16 +12,18 @@ class ProductsGridview extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
 
-    // Fixed height for each ProductGridItem
-    const itemHeight = 220.0;
+    final columnWidth = screenWidth * 0.43;
 
-    // Column width: slightly less than half screen to create peek
-    final columnWidth = screenWidth * 0.48;
+    // Define a single constant for height to maintain consistency
+    const double cardHeight = 200.0;
+    const double verticalSpacing = 12.0;
 
     return SizedBox(
-      height: itemHeight * 2 + 12, // 2 items stacked + spacing
+      // Calculate exact height: (2 cards) + (1 gap)
+      height: (cardHeight * 2) + verticalSpacing,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
+        // Ensure padding is consistent
         padding: const EdgeInsets.symmetric(horizontal: 16),
         itemCount: (products.length / 2).ceil(),
         itemBuilder: (context, columnIndex) {
@@ -30,19 +32,24 @@ class ProductsGridview extends StatelessWidget {
 
           return Container(
             width: columnWidth,
-            margin: const EdgeInsets.only(right: 12), // spacing between columns
+            margin: const EdgeInsets.only(right: 12),
             child: Column(
+              // Use mainAxisSize min so the column doesn't try to expand
+              // beyond its children if the parent is slightly larger
+              mainAxisSize: MainAxisSize.min,
               children: [
                 if (topIndex < products.length)
-                  ProductGridItem(
-                    product: products[topIndex],
-                    height: itemHeight,
+                  SizedBox(
+                    height: cardHeight,
+                    child: ProductGridItem(product: products[topIndex]),
                   ),
-                const SizedBox(height: 12),
+
+                const SizedBox(height: verticalSpacing),
+
                 if (bottomIndex < products.length)
-                  ProductGridItem(
-                    product: products[bottomIndex],
-                    height: itemHeight,
+                  SizedBox(
+                    height: cardHeight,
+                    child: ProductGridItem(product: products[bottomIndex]),
                   ),
               ],
             ),
@@ -50,7 +57,5 @@ class ProductsGridview extends StatelessWidget {
         },
       ),
     );
-  }
-}
-
+  }}
 

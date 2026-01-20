@@ -23,13 +23,7 @@ final products = [
       productPrice: '295,999',
       productSlashedPrice: '315,000'
   ),
-  ProductModel(
-      merchantLogo: AppImages.forty,
-      productImage: AppImages.nokiaG20,
-      productName: 'Nokia G20',
-      productPrice: '39,780',
-      productSlashedPrice: '295,999'
-  ),
+
   ProductModel(
       merchantLogo: AppImages.iMate,
       productImage: AppImages.iPhone12,
