@@ -7,16 +7,13 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Container(
-            // padding: EdgeInsets.all(16.w),
-            child: Column(
-              children: [
-                TopBar()
-              ],
-            ),
+          child: Column(
+            children: [
+              TopBar()
+            ],
           ),
         )
       ),
