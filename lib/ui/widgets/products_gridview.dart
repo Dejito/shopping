@@ -2,6 +2,7 @@
 
 import 'package:credpal_shopping/ui/widgets/product_items.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../data/products_list.dart';
 
@@ -18,9 +19,13 @@ class ProductsGridview extends StatelessWidget {
     const double cardHeight = 200.0;
     const double verticalSpacing = 12.0;
 
-    return SizedBox(
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 20.h),
+      decoration: const BoxDecoration(
+        color: Color(0xFFF1F3FC)
+      ),
       // Calculate exact height: (2 cards) + (1 gap)
-      height: (cardHeight * 2) + verticalSpacing,
+      height: (cardHeight * 2) + verticalSpacing * 5,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         // Ensure padding is consistent
