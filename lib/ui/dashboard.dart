@@ -1,3 +1,4 @@
+import 'package:credpal_shopping/ui/widgets/product_items.dart';
 import 'package:credpal_shopping/ui/widgets/products_gridview.dart';
 import 'package:credpal_shopping/ui/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
