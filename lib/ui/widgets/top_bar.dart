@@ -12,7 +12,7 @@ class TopBar extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 12.h),
       color: const Color(0xFFD0DAFF), // background colo,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 18.h),
         child: Column(
           children: [
             Row(
@@ -38,7 +38,6 @@ class TopBar extends StatelessWidget {
                         // SizedBox(width: 6.w),
                         Container(
                           padding: EdgeInsets.all(6.r),
-                          // margin: EdgeInsets.only(top: 4.h),
                           decoration: const BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle,
@@ -54,22 +53,25 @@ class TopBar extends StatelessWidget {
                   ],
                 ),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     const CustomTextWidget(
                       text: 'Shopping limit: ₦0',
-                      bottomPadding: 6,
+                      fontSize: 11,
+                      fontWeight: FontWeight.w500,
+                      bottomPadding: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.all(6.r),
+                      padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 14.w),
                       decoration: BoxDecoration(
                         color: const Color(0xFF274FED),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
                         'Activate Credit',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w500,
+                        style: GoogleFonts.poppins(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w600,
                           color: Colors.white,
                         ),
                       ),
@@ -78,6 +80,7 @@ class TopBar extends StatelessWidget {
                 )
               ],
             ),
+            SizedBox(height: 17.h,),
           ],
         ),
       ),
