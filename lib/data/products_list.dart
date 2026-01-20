@@ -12,14 +12,14 @@ final products = [
   ProductModel(
       merchantLogo: AppImages.okayPhone,
       productImage: AppImages.soundCore,
-      productName: 'Anker Soundcore',
+      productName: 'Anker Soundcore Limited Edition',
       productPrice: '39,780',
       productSlashedPrice: '88,000'
   ),
   ProductModel(
       merchantLogo: AppImages.ogaBassey,
       productImage: AppImages.iPhoneXs,
-      productName: 'iPhone XS Max 4GB',
+      productName: 'iPhone XS Max 4GB - Foldable',
       productPrice: '295,999',
       productSlashedPrice: '315,000'
   ),
@@ -32,18 +32,18 @@ final products = [
       productSlashedPrice: '515,000'
   ),
   ProductModel(
-      merchantLogo: AppImages.forty,
-      productImage: AppImages.nokiaG20,
-      productName: 'Nokia G20',
+      merchantLogo: AppImages.okayPhone,
+      productImage: AppImages.soundCore,
+      productName: 'Anker Soundcore Limited Edition',
       productPrice: '39,780',
-      productSlashedPrice: '295,999'
+      productSlashedPrice: '88,000'
   ),
   ProductModel(
-      merchantLogo: AppImages.forty,
-      productImage: AppImages.nokiaG20,
-      productName: 'Nokia G20',
-      productPrice: '39,780',
-      productSlashedPrice: '295,999'
+      merchantLogo: AppImages.ogaBassey,
+      productImage: AppImages.iPhoneXs,
+      productName: 'iPhone XS Max 4GB - Foldable',
+      productPrice: '295,999',
+      productSlashedPrice: '315,000'
   ),
 
 

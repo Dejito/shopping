@@ -23,7 +23,7 @@ class ProductGridItem extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          Padding(
+          Container(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,11 +32,11 @@ class ProductGridItem extends StatelessWidget {
                   child: Image.asset(
                     product.productImage,
                     fit: BoxFit.scaleDown,
-                    height: 100.h,
-                    width: 150.w,
+                    height: 85.h,
+                    width: 100.w,
                   ),
                 ),
-                // const SizedBox(height: 8),
+                SizedBox(height: 16.h),
                 Text(
                   product.productName,
                   maxLines: 1,
@@ -49,7 +49,8 @@ class ProductGridItem extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 // Price Row
-                FittedBox( // Prevents overflow on small screens
+                FittedBox(
+                  // Prevents overflow on small screens
                   child: Row(
                     children: [
                       Text(
@@ -88,14 +89,13 @@ class ProductGridItem extends StatelessWidget {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black.withOpacity(0.1),
                     blurRadius: 4,
                   )
                 ],
               ),
               padding: const EdgeInsets.all(6),
-              child:
-                   Image.asset(product.merchantLogo, fit: BoxFit.contain),
+              child: Image.asset(product.merchantLogo, fit: BoxFit.contain),
             ),
           ),
         ],
