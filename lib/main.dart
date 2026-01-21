@@ -1,4 +1,4 @@
-import 'package:credpal_shopping/ui/dashboard.dart';
+import 'package:credpal_shopping/ui/screen/dashboard.dart';
 import 'package:credpal_shopping/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       minTextAdapt: true,
-      designSize: const Size(390, 844), // your design size
-      // designSize: Size(logicalWidth(context), logicalHeight(context)),
+      // designSize: const Size(390, 844), // your design size
+      designSize: Size(logicalWidth(context), logicalHeight(context)),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'CredPal Assessment',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

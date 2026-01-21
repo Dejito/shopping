@@ -1,7 +1,7 @@
 
-//design height(responsiveness)
 import 'package:flutter/cupertino.dart';
 
+//design height(responsiveness)
 double logicalHeight(BuildContext context) {
   final view = View.of(context);
   return view.physicalSize.height / view.devicePixelRatio;

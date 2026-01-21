@@ -17,7 +17,4 @@ class AppImages {
   static const orile = 'assets/images/orile.webp';
   static const pointek = 'assets/images/pointek.webp';
   static const slot = 'assets/images/slot.webp';
-  // static const soundCore = 'assets/images/sound_core.webp';
-  // static const soundCore = 'assets/images/sound_core.webp';
-
 }
