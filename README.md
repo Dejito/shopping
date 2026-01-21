@@ -11,9 +11,10 @@ product grid with peek effects, a merchant directory, and custom search componen
 
 ## Screenshots
 
-<img src="assets/screenshots/screenshot1.png" width="250" />
-<img src="assets/screenshots/screenshot2.png" width="250" />
-<img src="assets/screenshots/screenshot3.png" width="250" />
+<p float="left">
+  <img src="assets/screenshots/screenshot1.png" width="250" />
+  <img src="assets/screenshots/screenshot2.png" width="250" />
+</p>
 
 <sub>Home · Featured Merchants · Search Component</sub>
 
@@ -22,7 +23,7 @@ product grid with peek effects, a merchant directory, and custom search componen
 ## Prerequisites
 
 - **Flutter SDK:** `>=3.4.3 <4.0.0`
-- **Dart:** 3.x
+- **Dart:** 3.4.3(stable)
 
 ---
 
