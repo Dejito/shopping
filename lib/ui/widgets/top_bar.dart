@@ -27,8 +27,6 @@ class TopBar extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                     ),
                     Row(
-                      // crossAxisAlignment: CrossAxisAlignment.baseline,
-                      // textBaseline: TextBaseline.alphabetic,
                       children: [
                         const CustomTextWidget(
                           text: 'everywhere ',

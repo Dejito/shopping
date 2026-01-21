@@ -14,13 +14,12 @@ class CustomSearchBar extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       child: Row(
         children: [
-          // Search Input field
           Expanded(
             child: Container(
               height: 50,
               decoration: BoxDecoration(
-                color: const Color(0xFFF1F3FE), // Subtle grey background
-                borderRadius: BorderRadius.circular(25), // Fully rounded
+                color: const Color(0xFFF1F3FE),
+                borderRadius: BorderRadius.circular(25),
               ),
               child: TextField(
                 onChanged: (_){},
@@ -45,10 +44,10 @@ class CustomSearchBar extends StatelessWidget {
           GestureDetector(
             onTap: (){},
             child: Container(
-              height: 50,
-              width: 50,
+              height: 45.h,
+              width: 45.w,
               decoration: BoxDecoration(
-                color: const Color(0xFFF1F3FE), // Subtle grey background
+                color: const Color(0xFFF1F3FE),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Icon(

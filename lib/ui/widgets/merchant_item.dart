@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../data/merchants_list.dart';
 import '../../data/models/merchant_model.dart';
 
 class MerchantItem extends StatelessWidget {
@@ -40,7 +40,7 @@ class MerchantItem extends StatelessWidget {
                   height: 16,
                   width: 16,
                   decoration: BoxDecoration(
-                    color: const Color(0xFF68D391), // Emerald green
+                    color: const Color(0xFF24C78B),
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.white, width: 2),
                   ),
@@ -49,16 +49,14 @@ class MerchantItem extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 8),
-        // Merchant Name
         Text(
           merchant.brandName,
           textAlign: TextAlign.center,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style:  GoogleFonts.montserrat(
-            fontSize: 12,
+            fontSize: 11.sp,
             fontWeight: FontWeight.w600,
-            // color: const Color(0xFF1A1C1E),
           ),
         ),
       ],

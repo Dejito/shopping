@@ -1,6 +1,5 @@
 import 'package:credpal_shopping/data/models/product_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductGridItem extends StatelessWidget {
   final ProductModel product;

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:credpal_shopping/ui/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -41,9 +39,6 @@ class MerchantsGridView extends StatelessWidget {
               ],
             ),
           ),
-
-
-          // Merchants Grid
           GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -53,7 +48,7 @@ class MerchantsGridView extends StatelessWidget {
               mainAxisSpacing: 10,
               crossAxisSpacing: 16,
               childAspectRatio:
-                  0.7, // Lowering this value actually makes the card TALLER
+                  0.7,
             ),
             itemCount: merchants.length,
             itemBuilder: (context, index) {
