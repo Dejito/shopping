@@ -1,91 +1,66 @@
-
-import 'dart:ui';
-
+import 'package:credpal_shopping/data/app_asets.dart';
 import 'package:credpal_shopping/data/models/merchant_model.dart';
+import 'package:flutter/material.dart';
 
 final merchants = [
   MerchantModel(
     isOnline: true,
     brandColor: const Color(0xFF000065),
     brandName: 'Justrite',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.justrite,
   ),
-
   MerchantModel(
     isOnline: true,
-    brandColor: const Color(0xFF000065),
+    brandColor: Colors.black,
     brandName: 'Orile Restaurant',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.orile,
   ),
-
   MerchantModel(
     isOnline: true,
-    brandColor: const Color(0xFF000065),
+    brandColor: const Color(0xFFED3237),
     brandName: 'Slot',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.slot,
   ),
-
   MerchantModel(
     isOnline: true,
-    brandColor: const Color(0xFF000065),
+    brandColor: const Color(0xFF0077C9),
     brandName: 'Pointek',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.pointek,
   ),
-
   MerchantModel(
     isOnline: true,
-    brandColor: const Color(0xFF000065),
+    brandColor: const Color(0xFFF1F3FE),
     brandName: 'ogabassey',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.ogaBassey,
   ),
-
   MerchantModel(
-    isOnline: true,
-    brandColor: const Color(0xFF000065),
+    isOnline: false,
+    brandColor: const Color(0xFFFE2B5E),
     brandName: 'Casper Stores',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.casper,
   ),
-
   MerchantModel(
-    isOnline: true,
-    brandColor: const Color(0xFF000065),
+    isOnline: false,
+    brandColor: const Color(0xFF3F4195),
     brandName: 'Dreamworks ',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.dw,
   ),
-
   MerchantModel(
     isOnline: true,
-    brandColor: const Color(0xFF000065),
-    brandName: 'Justrite',
-    brandLogo: 'assets/images/oga_bassey.png',
-  ),
-
-  MerchantModel(
-    isOnline: true,
-    brandColor: const Color(0xFF000065),
-    brandName: 'Justrite',
-    brandLogo: 'assets/images/oga_bassey.png',
-  ),
-
-  MerchantModel(
-    isOnline: true,
-    brandColor: const Color(0xFF000065),
+    brandColor: const Color(0xFF000000),
     brandName: 'Hubmart',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.hubMart,
   ),
-
   MerchantModel(
     isOnline: true,
-    brandColor: const Color(0xFF000065),
+    brandColor: const Color(0xFF13AFEE),
     brandName: 'Just Used',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.justUsed,
   ),
   MerchantModel(
     isOnline: true,
-    brandColor: const Color(0xFF000065),
+    brandColor: const Color(0xFF000000),
     brandName: 'Just fones',
-    brandLogo: 'assets/images/oga_bassey.png',
+    brandLogo: AppImages.justPhones,
   ),
-
-
 ];
