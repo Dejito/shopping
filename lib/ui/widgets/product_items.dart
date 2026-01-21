@@ -23,39 +23,35 @@ class ProductGridItem extends StatelessWidget {
       ),
       child: Stack(
         children: [
-// Inside your ProductGridItem Stack
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 1. Wrap the image in Expanded to prevent vertical overflow
                 Expanded(
                   child: Center(
                     child: Image.asset(
                       product.productImage,
-                      fit: BoxFit.contain, // Changed from scaleDown to contain
+                      fit: BoxFit.fill,
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 8), // Reduced from 16.h to save space
+                const SizedBox(height: 16),
 
-                // 2. Product Name
                 Text(
                   product.productName,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    fontSize: 13, // Slightly smaller to ensure fit
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black87,
                   ),
                 ),
 
-                const SizedBox(height: 4),
+                const SizedBox(height: 6),
 
-                // 3. Price Row
                 FittedBox(
                   fit: BoxFit.scaleDown,
                   alignment: Alignment.centerLeft,
@@ -84,7 +80,6 @@ class ProductGridItem extends StatelessWidget {
               ],
             ),
           ),
-          // 2. Floating Badge Layer (Top Left)
           Positioned(
             top: 10,
             left: 10,
