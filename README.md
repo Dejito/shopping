@@ -1,16 +1,11 @@
-# credpal_shopping
+# Credpal Shopping
 
-A new Flutter project.
+## Prerequisites
 
-## Getting Started
+This flutter project is built with SDK version '>=3.4.3 <4.0.0'
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Project Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The project follows a standard Flutter project structure:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

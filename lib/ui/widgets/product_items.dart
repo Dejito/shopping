@@ -58,7 +58,7 @@ class ProductGridItem extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        '₦${product.productPrice}',
+                        '₦ ${product.productPrice}',
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -67,9 +67,9 @@ class ProductGridItem extends StatelessWidget {
                       ),
                       const SizedBox(width: 4),
                       Text(
-                        '₦${product.productSlashedPrice}',
+                        '₦ ${product.productSlashedPrice}',
                         style: const TextStyle(
-                          fontSize: 11,
+                          fontSize: 12,
                           color: Colors.grey,
                           decoration: TextDecoration.lineThrough,
                         ),
