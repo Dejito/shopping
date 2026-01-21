@@ -7,9 +7,11 @@ product grid with peek effects, a merchant directory, and custom search componen
 
 This flutter project is built with SDK version '>=3.4.3 <4.0.0'
 
-## Screenshot
-Home Overview,Featured Merchants,Search Component
-"<img src=""assets/screenshots/screenshot1.png"" width=""250"">","<img src=""assets/screenshots/screenshot2.png"" width=""250"">","<img src=""assets/screenshots/screenshot1.png"" width=""250"">"
+## Screenshots
+
+<img src="assets/screenshots/screenshot1.png" width="250" />
+<img src="assets/screenshots/screenshot2.png" width="250" />
+
 
 ## Features
 
@@ -29,7 +31,11 @@ Adaptive Layouts: Carefully managed RenderFlex constraints to ensure smooth rend
 The project follows a standard Flutter project structure:
 
 assets/images/: Contains product images and brand logos.
+
 assets/screenshots/: Documentation images for the repository.
+
 lib/data/: Contains the data models(product and merchant) and list of the model data type used in the app.
+
 lib/ui/screen/: contains Dashboard that renders the widgets.
+
 lib/ui/widgets/: Modularized Stateless widgets including CustomSearchBar, ProductGridItem, and MerchantItem.
