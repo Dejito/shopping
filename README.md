@@ -16,7 +16,7 @@ product grid with peek effects, a merchant directory, and custom search componen
   <img src="assets/screenshots/screenshot2.png" width="250" />
 </p>
 
-<sub>Home · Featured Merchants · Search Component</sub>
+<sub>Available Products · Featured Merchants · Search Component</sub>
 
 ---
 
@@ -30,10 +30,10 @@ product grid with peek effects, a merchant directory, and custom search componen
 ## Features
 
 - **Custom Search Bar**  
-  Fully rounded search input paired with a modular scan action button.
+  Search input with a modular scan action button.
 
 - **Horizontal Product Grid (Peek Effect)**  
-  Allows users to preview upcoming items, with carefully tuned constraints to prevent
+   Nudges users of more products features  
   `RenderFlex` and overflow issues.
 
 - **Merchant Directory**  
