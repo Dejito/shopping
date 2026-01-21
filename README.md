@@ -1,41 +1,59 @@
-# Credpal Shopping UI Clone
+# CredPal Shopping UI Clone
 
-A high-fidelity Flutter implementation of the CredPal shopping interface, featuring a horizontal 
+![Flutter](https://img.shields.io/badge/Flutter-3.4+-02569B?logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart)
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green)
+
+A high-fidelity **Flutter UI clone** of the CredPal shopping interface, featuring a horizontal
 product grid with peek effects, a merchant directory, and custom search components.
 
-## Prerequisites
-
-This flutter project is built with SDK version '>=3.4.3 <4.0.0'
+---
 
 ## Screenshots
 
 <img src="assets/screenshots/screenshot1.png" width="250" />
 <img src="assets/screenshots/screenshot2.png" width="250" />
+<img src="assets/screenshots/screenshot3.png" width="250" />
 
+<sub>Home · Featured Merchants · Search Component</sub>
+
+---
+
+## Prerequisites
+
+- **Flutter SDK:** `>=3.4.3 <4.0.0`
+- **Dart:** 3.x
+
+---
 
 ## Features
 
-Custom Search Bar: A fully rounded search input paired with a modular scan action button.
+- **Custom Search Bar**  
+  Fully rounded search input paired with a modular scan action button.
 
-Horizontal Product Grid: Implements a "peek" effect allowing users to see the next set of items, optimized with 
-specific constraints to prevent layout overflows.
+- **Horizontal Product Grid (Peek Effect)**  
+  Allows users to preview upcoming items, with carefully tuned constraints to prevent
+  `RenderFlex` and overflow issues.
 
-Merchant Directory: A responsive grid of featured brands with custom "online status" indicators and brand-specific
-color themes.
+- **Merchant Directory**  
+  Responsive brand grid with custom *online status* indicators and brand-specific color themes.
 
-Adaptive Layouts: Carefully managed RenderFlex constraints to ensure smooth rendering across various device sizes.
+- **Adaptive Layouts**  
+  Explicit constraint management to ensure smooth rendering across various screen sizes.
 
+---
 
 ## Project Structure
 
-The project follows a standard Flutter project structure:
+The project follows a standard Flutter layout:
 
-assets/images/: Contains product images and brand logos.
+```text
+assets/
+ ├── images/        # Product images and brand logos
+ └── screenshots/   # README documentation images
 
-assets/screenshots/: Documentation images for the repository.
-
-lib/data/: Contains the data models(product and merchant) and list of the model data type used in the app.
-
-lib/ui/screen/: contains Dashboard that renders the widgets.
-
-lib/ui/widgets/: Modularized Stateless widgets including CustomSearchBar, ProductGridItem, and MerchantItem.
+lib/
+ ├── data/          # Models (Product, Merchant) + mock data
+ └── ui/
+     ├── screen/    # Dashboard screen
+     └── widgets/   # CustomSearchBar, ProductGridItem, MerchantItem
