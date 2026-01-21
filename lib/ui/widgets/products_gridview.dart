@@ -11,11 +11,13 @@ class ProductsGridview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final screenWidth = MediaQuery.of(context).size.width;
 
     final columnWidth = screenWidth * 0.41;
 
-    const double cardHeight = 180.0;
+    const double cardHeight = 200.0;
+
     const double verticalSpacing = 12.0;
 
     return Container(
@@ -23,7 +25,7 @@ class ProductsGridview extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Color(0xFFF1F3FC)
       ),
-      height: (cardHeight * 2) + verticalSpacing * 5,
+      height: (cardHeight * 2) + verticalSpacing * 5.5,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 16),

@@ -23,49 +23,57 @@ class ProductGridItem extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16),
+// Inside your ProductGridItem Stack
+          Padding(
+            padding: const EdgeInsets.all(12.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
-                  child: Image.asset(
-                    product.productImage,
-                    fit: BoxFit.scaleDown,
-                    height: 85.h,
-                    width: 100.w,
+                // 1. Wrap the image in Expanded to prevent vertical overflow
+                Expanded(
+                  child: Center(
+                    child: Image.asset(
+                      product.productImage,
+                      fit: BoxFit.contain, // Changed from scaleDown to contain
+                    ),
                   ),
                 ),
-                SizedBox(height: 16.h),
+
+                const SizedBox(height: 8), // Reduced from 16.h to save space
+
+                // 2. Product Name
                 Text(
                   product.productName,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    fontSize: 14,
+                    fontSize: 13, // Slightly smaller to ensure fit
                     fontWeight: FontWeight.w500,
                     color: Colors.black87,
                   ),
                 ),
+
                 const SizedBox(height: 4),
-                // Price Row
+
+                // 3. Price Row
                 FittedBox(
-                  // Prevents overflow on small screens
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerLeft,
                   child: Row(
                     children: [
                       Text(
-                        '₦ ${product.productPrice}',
+                        '₦${product.productPrice}',
                         style: const TextStyle(
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF274FED),
                         ),
                       ),
-                      const SizedBox(width: 6),
+                      const SizedBox(width: 4),
                       Text(
-                        '₦ ${product.productSlashedPrice}',
+                        '₦${product.productSlashedPrice}',
                         style: const TextStyle(
-                          fontSize: 12,
+                          fontSize: 11,
                           color: Colors.grey,
                           decoration: TextDecoration.lineThrough,
                         ),
@@ -76,7 +84,6 @@ class ProductGridItem extends StatelessWidget {
               ],
             ),
           ),
-
           // 2. Floating Badge Layer (Top Left)
           Positioned(
             top: 10,

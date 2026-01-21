@@ -5,6 +5,7 @@ import '../../data/merchants_list.dart';
 import '../../data/models/merchant_model.dart';
 
 class MerchantItem extends StatelessWidget {
+  
   final MerchantModel merchant;
 
   const MerchantItem({super.key, required this.merchant});
@@ -56,7 +57,7 @@ class MerchantItem extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           style:  GoogleFonts.montserrat(
             fontSize: 12,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             // color: const Color(0xFF1A1C1E),
           ),
         ),

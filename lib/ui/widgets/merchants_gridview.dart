@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:credpal_shopping/ui/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -5,6 +7,7 @@ import '../../data/merchants_list.dart';
 import 'merchant_item.dart';
 
 class MerchantsGridView extends StatelessWidget {
+
   const MerchantsGridView({super.key});
 
   @override
@@ -21,15 +24,17 @@ class MerchantsGridView extends StatelessWidget {
               const Text(
                 "Featured Merchants",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Color(0xFF1A1C1E),
                 ),
               ),
               TextButton(
                 onPressed: () {},
-                child: CustomTextWidget(text: "View all",
+                child: const CustomTextWidget(text: "View all",
                   fontSize: 12,
+                  color: Color(0xFF274FED),
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ],
@@ -43,7 +48,7 @@ class MerchantsGridView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
-            mainAxisSpacing: 10, // Reduced slightly to save vertical space
+            mainAxisSpacing: 10,
             crossAxisSpacing: 16,
             childAspectRatio:
                 0.7, // Lowering this value actually makes the card TALLER
