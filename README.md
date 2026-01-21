@@ -7,6 +7,7 @@ product grid with peek effects, a merchant directory, and custom search componen
 
 This flutter project is built with SDK version '>=3.4.3 <4.0.0'
 
+## Screenshot
 Home Overview,Featured Merchants,Search Component
 "<img src=""assets/screenshots/screenshot1.png"" width=""250"">","<img src=""assets/screenshots/screenshot2.png"" width=""250"">","<img src=""assets/screenshots/screenshot1.png"" width=""250"">"
 
