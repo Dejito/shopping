@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSearchBar extends StatelessWidget {
 
@@ -8,8 +9,9 @@ class CustomSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12),
+    return Container(
+      color: Colors.white,
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       child: Row(
         children: [
           // Search Input field
@@ -17,7 +19,7 @@ class CustomSearchBar extends StatelessWidget {
             child: Container(
               height: 50,
               decoration: BoxDecoration(
-                // color: const Color(0xFFF5F6FA), // Subtle grey background
+                color: const Color(0xFFF1F3FE), // Subtle grey background
                 borderRadius: BorderRadius.circular(25), // Fully rounded
               ),
               child: TextField(
@@ -38,7 +40,7 @@ class CustomSearchBar extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 20),
           // Scan Button
           GestureDetector(
             onTap: (){},
@@ -46,7 +48,7 @@ class CustomSearchBar extends StatelessWidget {
               height: 50,
               width: 50,
               decoration: BoxDecoration(
-                color: const Color(0xFFF5F6FA),
+                color: const Color(0xFFF1F3FE), // Subtle grey background
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Icon(

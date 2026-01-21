@@ -70,7 +70,7 @@ class TopBar extends StatelessWidget {
                       child: Text(
                         'Activate Credit',
                         style: GoogleFonts.poppins(
-                          fontSize: 14.sp,
+                          fontSize: 13.sp,
                           fontWeight: FontWeight.w600,
                           color: Colors.white,
                         ),
@@ -80,7 +80,7 @@ class TopBar extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 17.h,),
+            SizedBox(height: 14.h,),
           ],
         ),
       ),
