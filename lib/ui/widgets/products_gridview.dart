@@ -2,6 +2,7 @@
 
 import 'package:credpal_shopping/ui/widgets/product_items.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../data/products_list.dart';
@@ -22,8 +23,8 @@ class ProductsGridview extends StatelessWidget {
 
     return Container(
       padding: EdgeInsets.symmetric(vertical: 20.h),
-      decoration: const BoxDecoration(
-        color: Color(0xFFF1F3FC)
+      decoration:  const BoxDecoration(
+        color: Colors.white
       ),
       height: (cardHeight * 2) + verticalSpacing * 5.5,
       child: ListView.builder(
@@ -33,12 +34,10 @@ class ProductsGridview extends StatelessWidget {
         itemBuilder: (context, columnIndex) {
           final topIndex = columnIndex * 2;
           final bottomIndex = topIndex + 1;
-
           return Container(
             width: columnWidth,
             margin: EdgeInsets.only(right: 20.w, bottom: 6.h),
             child: Column(
-
               mainAxisSize: MainAxisSize.min,
               children: [
                 if (topIndex < products.length)
